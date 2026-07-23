@@ -88,7 +88,7 @@ export default function SSCPage() {
               </p>
               <p>
                 Grâce à sa capacité d'adaptation, SSC conçoit des <strong>parcours sur mesure</strong>,
-                en phase avec les compétences attendues sur le terrain. h
+                en phase avec les compétences attendues sur le terrain.
               </p>
             </motion.div>
 
