@@ -44,6 +44,8 @@ export default function ContactPage() {
 
   return (
     <div className="page page-contact">
+      <title>Contact | Sport Solutions</title>
+      <meta name="description" content="Contactez Sport Solutions : téléphone, email, formulaire de contact. Siège social à Paris 18e. Pour tout projet d'insertion par le sport en Île-de-France." />
       <section className="page-hero section page-hero--small">
         <GradientBlob className="page-hero-blob" />
         <div className="container">

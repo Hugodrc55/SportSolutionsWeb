@@ -4,11 +4,107 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sport Solutions – Le sport au service de l'emploi. Parcours d'insertion et de qualification dans le sport aquatique et terrestre en Île-de-France." />
+    <meta name="theme-color" content="#0A3496" />
+
+    <!-- Primary SEO -->
     <title>Sport Solutions | Le sport au service de l'emploi</title>
+    <meta name="description" content="Sport Solutions – Le sport au service de l'emploi. Parcours d'insertion et de qualification dans le sport aquatique et terrestre en Île-de-France." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sportsolutions.fr/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sportsolutions.fr/" />
+    <meta property="og:title" content="Sport Solutions | Le sport au service de l'emploi" />
+    <meta property="og:description" content="Parcours d'insertion et de qualification dans le sport aquatique et terrestre en Île-de-France depuis 2018. Association loi 1901 conventionnée avec le Ministère du Travail." />
+    <meta property="og:image" content="https://sportsolutions.fr/og-image.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Sport Solutions" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sport Solutions | Le sport au service de l'emploi" />
+    <meta name="twitter:description" content="Parcours d'insertion et de qualification dans le sport aquatique et terrestre en Île-de-France." />
+    <meta name="twitter:image" content="https://sportsolutions.fr/og-image.jpg" />
+
+    <!-- Fonts : préconnexion puis chargement -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://sportsolutions.fr/#organization",
+          "name": "Sport Solutions",
+          "url": "https://sportsolutions.fr/",
+          "description": "Association loi 1901 déployant une méthode d'insertion professionnelle innovante par le sport en Île-de-France depuis 2018.",
+          "foundingDate": "2018",
+          "areaServed": {
+            "@type": "State",
+            "name": "Île-de-France"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-1-84-25-13-82",
+            "email": "contact@sportsolutions.fr",
+            "contactType": "customer service",
+            "availableLanguage": "French"
+          },
+          "sameAs": [
+            "https://www.facebook.com/sportsolutions",
+            "https://www.instagram.com/sportsolutions"
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://sportsolutions.fr/favicon.png"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://sportsolutions.fr/#website",
+          "url": "https://sportsolutions.fr/",
+          "name": "Sport Solutions",
+          "description": "Le sport au service de l'emploi",
+          "publisher": { "@id": "https://sportsolutions.fr/#organization" },
+          "inLanguage": "fr-FR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://sportsolutions.fr/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "name": "Navigation principale",
+          "itemListElement": [
+            {
+              "@type": "SiteLinksSearchBox",
+              "url": "https://sportsolutions.fr/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://sportsolutions.fr/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            },
+            { "@type": "ListItem", "position": 1, "name": "À propos",        "url": "https://sportsolutions.fr/a-propos" },
+            { "@type": "ListItem", "position": 2, "name": "Espace Candidat", "url": "https://sportsolutions.fr/espace-candidat" },
+            { "@type": "ListItem", "position": 3, "name": "Espace Club",     "url": "https://sportsolutions.fr/espace-club" },
+            { "@type": "ListItem", "position": 4, "name": "Le Mag",          "url": "https://sportsolutions.fr/le-mag" },
+            { "@type": "ListItem", "position": 5, "name": "Contact",         "url": "https://sportsolutions.fr/contact" }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

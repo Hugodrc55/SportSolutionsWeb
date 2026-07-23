@@ -178,6 +178,8 @@ const accordionGEIQ = [
 export default function CandidatPage() {
   return (
     <div className="page page-candidat">
+      <title>Espace Candidat | Sport Solutions</title>
+      <meta name="description" content="Vous voulez faire du sport votre métier ? Découvrez les dispositifs ACI et GEIQ de Sport Solutions : contrat de travail, diplôme d'État, insertion professionnelle en Île-de-France." />
       <section className="page-hero section">
         <div className="page-hero-bg" aria-hidden="true">
           <img src={imgHero} alt="" />

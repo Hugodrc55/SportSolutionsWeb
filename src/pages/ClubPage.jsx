@@ -112,6 +112,8 @@ export default function ClubPage() {
 
   return (
     <div className="page page-club">
+      <title>Espace Club | Sport Solutions</title>
+      <meta name="description" content="Clubs sportifs : rejoignez Sport Solutions pour accueillir des salariés en insertion et développer votre projet associatif en Île-de-France. Partenariat ACI, GEIQ et SSC." />
       <section className="page-hero section">
         <div className="page-hero-bg" aria-hidden="true">
           <img src={imgHero} alt="" />

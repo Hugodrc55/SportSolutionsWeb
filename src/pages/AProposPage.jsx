@@ -99,6 +99,8 @@ const dispositifsAPropos = [
 export default function AProposPage() {
   return (
     <div className="page page-about">
+      <title>À propos | Sport Solutions</title>
+      <meta name="description" content="Découvrez l'histoire, l'équipe et les convictions de Sport Solutions – association loi 1901 pionnière de l'insertion professionnelle par le sport en Île-de-France depuis 2018." />
       <section className="page-hero section">
         <div className="page-hero-bg" aria-hidden="true">
           <img src={imgPageHero} alt="" />

@@ -27,6 +27,8 @@ const fadeUp = (delay = 0) => ({
 export default function SSCPage() {
   return (
     <div className="page page-ssc">
+      <title>Sport Solutions Compétences | Sport Solutions</title>
+      <meta name="description" content="Sport Solutions Compétences (SSC) : co-construire le projet associatif de votre club sportif avec des formations qualifiantes et des leviers de développement innovants." />
 
       {/* Hero */}
       <section className="page-hero section">
@@ -86,7 +88,7 @@ export default function SSCPage() {
               </p>
               <p>
                 Grâce à sa capacité d'adaptation, SSC conçoit des <strong>parcours sur mesure</strong>,
-                en phase avec les compétences attendues sur le terrain.
+                en phase avec les compétences attendues sur le terrain. h
               </p>
             </motion.div>
 

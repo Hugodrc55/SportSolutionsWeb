@@ -9,6 +9,8 @@ import Contact from "../components/Contact.jsx";
 export default function HomePage() {
   return (
     <>
+      <title>Sport Solutions | Le sport au service de l'emploi</title>
+      <meta name="description" content="Sport Solutions – parcours d'insertion et de qualification dans le sport aquatique et terrestre en Île-de-France. Association loi 1901 conventionnée avec le Ministère du Travail." />
       <Hero />
       <About />
       <Stats />

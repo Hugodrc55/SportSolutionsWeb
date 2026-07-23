@@ -58,6 +58,8 @@ const numeros = [
 export default function LeMagPage() {
   return (
     <div className="page page-mag">
+      <title>Le Mag | Sport Solutions</title>
+      <meta name="description" content="Retrouvez les numéros du magazine Sport Solutions : actualités, témoignages et décryptages sur l'insertion professionnelle par le sport en Île-de-France." />
       <section className="page-hero section">
         <div className="page-hero-bg" aria-hidden="true">
           <img src={imgHero} alt="" />
