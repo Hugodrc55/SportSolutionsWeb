@@ -1,0 +1,54 @@
+name: Déployer sur OVH
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-ovh-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci
+
+      - name: Compiler le site
+        run: npm run build
+
+      - name: Installer le client SFTP
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Déployer le dossier dist sur OVH
+        env:
+          OVH_HOST: ${{ secrets.OVH_HOST }}
+          OVH_USER: ${{ secrets.OVH_USER }}
+          OVH_PASSWORD: ${{ secrets.OVH_PASSWORD }}
+          OVH_REMOTE_DIR: /home/sportsolqn/nouveau-site
+        run: |
+          lftp <<EOF
+          set cmd:fail-exit yes
+          set sftp:auto-confirm yes
+          set net:max-retries 2
+          set net:timeout 20
+          open -u "$OVH_USER","$OVH_PASSWORD" "sftp://$OVH_HOST:22"
+          mirror --reverse --delete --verbose --parallel=4 dist/ "$OVH_REMOTE_DIR/"
+          bye
+          EOF
