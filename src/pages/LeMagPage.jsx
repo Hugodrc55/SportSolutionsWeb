@@ -6,9 +6,11 @@ import imgHero from "../assets/image/sportsoat.png";
 import cover1 from "../assets/image/sport-solutions-le-mag-t1-2023.webp";
 import cover2 from "../assets/image/Couv-Mag-2-19.webp";
 import cover3 from "../assets/image/Le-Mag3_Couv_VF_Plan-de-travail-1-.webp";
+import cover4 from "../assets/image/mag4.png";
 import pdf1 from "../assets/mag/Le_Mag_01_2023.pdf";
 import pdf2 from "../assets/mag/Sport-Solutions_Le-Mag-2_web.pdf";
 import pdf3 from "../assets/mag/Le-Mag-3_VF_180724_WEB_New.pdf";
+import pdf4 from "../assets/mag/BAT_Sport-Solutions-Magazine-JANV-FEVR-2026-030226_9358.pdf";
 
 const numeros = [
   {
@@ -52,6 +54,21 @@ const numeros = [
       "Un Club, une vision, un partenaire : L'AAS Sarcelles Football Club",
     ],
     accentVar: "teal",
+  },
+  {
+    id: 4,
+    titre: "Le Mag #4",
+    cover: cover4,
+    pdf: pdf4,
+    intro: "Janvier–Février 2026 : sport santé, féminisation des métiers et les nouveaux terrains de l'emploi.",
+    sommaire: [
+      "Bilan & Perspectives – Après un bel élan en 2025, l'accélération en 2026",
+      "Sport Santé – Élargir le terrain de jeu : de nouvelles perspectives pour l'insertion",
+      "La place des femmes dans le sport – Égalité, mixité, inclusion : cap sur 2026",
+      "Success Story – Enzo Adam : « Avec Sport Solutions, j'ai transformé ma passion en métier »",
+      "Entretien – L'insertion, une alliance des territoires : regards croisés avec nos partenaires institutionnels",
+    ],
+    accentVar: "warm",
   },
 ];
 
@@ -123,7 +140,10 @@ export default function LeMagPage() {
                   aria-label={`Lire ${num.titre}`}
                 >
                   <div className="mag-cover-wrapper">
-                    <img src={num.cover} alt={`Couverture ${num.titre}`} className="mag-cover" />
+                    {num.cover
+                      ? <img src={num.cover} alt={`Couverture ${num.titre}`} className="mag-cover" />
+                      : <div className="mag-cover-placeholder"><span>{num.titre}</span></div>
+                    }
                     <div className="mag-cover-hover">
                       <span className="mag-cover-hover-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28">
@@ -255,6 +275,19 @@ export default function LeMagPage() {
           transition: transform 0.45s ease;
         }
         .mag-cover-link:hover .mag-cover { transform: scale(1.04); }
+        .mag-cover-placeholder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, var(--navy-mid) 0%, var(--accent) 100%);
+          color: rgba(255,255,255,0.85);
+          font-family: var(--font-display);
+          font-size: 1.6rem;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
         .mag-cover-hover {
           position: absolute;
           inset: 0;
